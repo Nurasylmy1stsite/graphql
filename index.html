@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01edu // Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-view" class="view-container flex-center">
+        <div class="auth-card">
+            <div class="auth-header">
+                <span class="auth-brand">01edu</span>
+                <p>System Authentication</p>
+            </div>
+            <form id="login-form">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="nmurzamu" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <div id="login-error" class="error-msg"></div>
+                <button type="submit" class="btn-primary">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="dashboard-view" class="view-container hidden">
+        <header class="top-nav">
+            <div class="nav-brand">01edu <span class="nav-sub">Portal</span></div>
+            <div class="nav-meta">
+                <span id="clock" class="clock">00:00:00</span>
+                <button id="logout-btn" class="btn-outline">Logout</button>
+            </div>
+        </header>
+
+        <div class="content-layout">
+            <aside class="side-panel">
+                <div class="panel profile-card">
+                    <div class="avatar">N</div>
+                    <div class="profile-info">
+                        <h2 id="user-login">NMURZAMU</h2>
+                        <span class="status-badge">Apprentice developer</span>
+                    </div>
+                </div>
+                <div class="panel level-box">
+                    <div class="level-header">
+                        <span>Level <span id="user-level">29</span></span>
+                    </div>
+                    <div class="progress-track"><div id="lvl-fill" class="progress-bar"></div></div>
+                    <p class="xp-next">Next level in 24.3 kB</p>
+                </div>
+                <div class="panel meta-panel">
+                    <div class="meta-item"><span>Status</span><span class="val-active">Active</span></div>
+                    <div class="meta-item"><span>Program</span><span>Module #37</span></div>
+                    <div class="meta-item"><span>Cohort</span><span>Technopark2025</span></div>
+                </div>
+            </aside>
+
+            <main class="dashboard-main">
+                <div class="welcome-bar">
+                    <h1 id="welcome-msg">Welcome, Nurasyl Murzamukhamed!</h1>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="m-label">Total Experience</span>
+                        <span id="total-xp" class="m-value">0 MB</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="m-label">Audit Ratio</span>
+                        <span id="audit-ratio" class="m-value">0.0</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="m-label">Transfers</span>
+                        <div class="m-sub"><span id="audit-up">0.00</span> ↑ / <span id="audit-down">0.00</span> ↓</div>
+                    </div>
+                </div>
+
+                <div class="visuals-row">
+                    <div class="panel xp-panel">
+                        <h3>Experience Growth</h3>
+                        <div id="xp-chart" class="chart-container"></div>
+                    </div>
+                    <div class="panel ratio-panel">
+                        <h3>Audit Balance Vector</h3>
+                        <div id="audit-chart" class="chart-container flex-center"></div>
+                    </div>
+                </div>
+
+                <div class="footer-row">
+                    <div class="panel skills-panel">
+                        <h3>Core Competencies</h3>
+                        <div id="skills-container" class="skill-cloud"></div>
+                    </div>
+                    <div class="panel events-panel">
+                        <h3>Upcoming Key Events</h3>
+                        <div class="event-stack">
+                            <div class="event-row"><span>Rust Piscine #40</span> <span class="date">Jun 26</span></div>
+                            <div class="event-row"><span>AI Piscine #41</span> <span class="date">Dec 25</span></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
