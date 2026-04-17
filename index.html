@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01edu // Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-view" class="view-container flex-center">
+        <div class="auth-card">
+            <div class="auth-header">
+                <span class="auth-brand">01edu</span>
+                <p>System Authentication</p>
+            </div>
+            <form id="login-form">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="nmurzamu" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <div id="login-error" class="error-msg"></div>
+                <button type="submit" class="btn-primary">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="dashboard-view" class="view-container hidden">
+        <header class="top-nav">
+            <div class="nav-brand">01edu <span class="nav-sub">Portal</span></div>
+            <div class="nav-meta">
+                <span id="clock" class="clock">00:00:00</span>
+                <button id="logout-btn" class="btn-outline">Logout</button>
+            </div>
+        </header>
+
+        <div class="content-layout">
+            <aside class="side-panel">
+                <div class="panel profile-card">
+                    <div class="avatar">N</div>
+                    <div class="profile-info">
+                        <h2>NMURZAMU</h2>
+                        <span class="status-badge">Assistant developer</span>
+                    </div>
+                </div>
+                
+                <div class="panel level-box">
+                    <div class="level-header">
+                        <span>Level 30</span>
+                    </div>
+                    <div class="progress-track"><div class="progress-bar" style="width: 78%;"></div></div>
+                    <p class="xp-next">Next level in 85.3 kB</p>
+                </div>
+
+                <div class="panel info-panel">
+                    <h3>Teamwork Stats</h3>
+                    <div class="info-row">
+                        <span class="info-label">Best friend</span>
+                        <span class="info-val highlight">mkaldiba</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Extra Rewards</span>
+                        <span class="info-val highlight">5.13 kB</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Objective</span>
+                        <span class="info-val">Byte Buddy</span>
+                    </div>
+                </div>
+
+                <div class="panel info-panel">
+                    <h3>System Status</h3>
+                    <div class="info-row">
+                        <span class="info-label">Status</span>
+                        <span class="info-val val-active">Active</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Program</span>
+                        <span class="info-val">Module #37</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Cohort</span>
+                        <span class="info-val">Technopark2025</span>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="dashboard-main">
+                <div class="welcome-bar">
+                    <h1>Welcome, Nurasyl Murzamukhamed!</h1>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="m-label">Total Experience</span>
+                        <span class="m-value">1.04 MB</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="m-label">Audit Ratio</span>
+                        <span class="m-value">1.1</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="m-label">Transfers</span>
+                        <div class="m-sub">2.45 MB ↑ / 2.29 MB ↓</div>
+                    </div>
+                </div>
+
+                <div class="visuals-row">
+                    <div class="panel xp-panel">
+                        <h3>Experience Growth (Data Matrix)</h3>
+                        <div id="xp-chart" class="chart-container"></div>
+                    </div>
+                    <div class="panel ratio-panel">
+                        <h3>Audit Balance Vector</h3>
+                        <div id="audit-chart" class="chart-container flex-center"></div>
+                    </div>
+                </div>
+
+                <div class="footer-row">
+                    <div class="panel list-panel">
+                        <h3>Recent Records</h3>
+                        <div class="scroll-stack">
+                            <div class="list-item"><span>ascii-art-reverse</span> <b>6.13 kB</b></div>
+                            <div class="list-item"><span>ascii-art-output</span> <b>6.13 kB</b></div>
+                            <div class="list-item"><span>ascii-art-justify</span> <b>6.13 kB</b></div>
+                            <div class="list-item"><span>ascii-art-fs</span> <b>6.13 kB</b></div>
+                            <div class="list-item"><span>graphql</span> <b class="val-active">in progress</b></div>
+                        </div>
+                    </div>
+                    <div class="panel list-panel">
+                        <h3>Upcoming Events</h3>
+                        <div class="scroll-stack">
+                            <div class="list-item"><span>Piscine Rust #40</span> <span class="date">Jun 26</span></div>
+                            <div class="list-item"><span>Piscine AI #41</span> <span class="date">Dec 25</span></div>
+                            <div class="list-item"><span>Piscine Java #46</span> <span class="date">Future</span></div>
+                        </div>
+                    </div>
+                    <div class="panel skills-panel">
+                        <h3>Core Skills</h3>
+                        <div class="skill-cloud">
+                            <span class="skill-tag">GO</span> <span class="skill-tag">JS</span>
+                            <span class="skill-tag">GIT</span> <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">BACKEND</span> <span class="skill-tag">ALGO</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
