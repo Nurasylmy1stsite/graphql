@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01edu // Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-view" class="view-container flex-center">
+        <div class="auth-card">
+            <div class="auth-header">
+                <span class="auth-brand">01edu</span>
+                <p>System Authentication</p>
+            </div>
+            <form id="login-form">
+                <div class="input-group">
+                    <label>Username (Email)</label>
+                    <input type="text" id="username" placeholder="nmurzamu" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <div id="login-error" class="error-msg"></div>
+                <button type="submit" class="btn-primary">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="dashboard-view" class="view-container hidden">
+        <header class="top-nav">
+            <div class="nav-brand">01edu <span class="nav-sub">Portal</span></div>
+            <div class="nav-meta">
+                <span id="clock" class="clock">00:00:00</span>
+                <button id="logout-btn" class="btn-outline">Logout</button>
+            </div>
+        </header>
+
+        <div class="content-layout">
+            <aside class="side-panel">
+                <div class="panel profile-card">
+                    <div class="profile-info">
+                        <h2 id="user-login">LOADING...</h2>
+                        <span class="status-badge">Student</span>
+                    </div>
+                </div>
+                
+                <div class="panel level-box">
+                    <div class="level-header">
+                        <span>Level <span id="user-level">--</span></span>
+                    </div>
+                    <div class="progress-track"><div class="progress-bar" style="width: 50%;"></div></div>
+                    <p class="xp-next">Module #37</p>
+                </div>
+
+                <div class="panel info-panel">
+                    <h3>Performance Ratio</h3>
+                    <div id="pass-fail-chart" class="pf-container"></div>
+                </div>
+            </aside>
+
+            <main class="dashboard-main">
+                <div class="welcome-bar">
+                    <h1 id="welcome-msg">Welcome back!</h1>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="m-label">Total Experience</span>
+                        <span id="total-xp" class="m-value">--</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="m-label">Audit Ratio</span>
+                        <span id="audit-ratio" class="m-value">--</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="m-label">Transfers</span>
+                        <div class="m-sub"><span id="audit-up">--</span> ↑ / <span id="audit-down">--</span> ↓</div>
+                    </div>
+                </div>
+
+                <div class="visuals-row">
+                    <div class="panel xp-panel">
+                        <h3>Experience Growth</h3>
+                        <div id="xp-chart" class="chart-container"></div>
+                    </div>
+                    <div class="panel ratio-panel">
+                        <h3>Audit Vector</h3>
+                        <div id="audit-chart" class="chart-container flex-center"></div>
+                    </div>
+                </div>
+
+                <div class="footer-row-single">
+                    <div class="panel skills-panel">
+                        <h3>Core Skills</h3>
+                        <div id="skills-container" class="skill-cloud"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
